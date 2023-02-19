@@ -1,36 +1,31 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - main function
- *
+ * main - entry point
  * Return: always 0
  */
 
 int main(void)
-{
-	int i;
-	int j;
-	int k;
 
-	for (i = 0 ; i < 10 ; i++)
+{
+	int p, q;
+
+	for (p = 0; p <= 98; p++)
 	{
-		for (j = 1 ; j < 10 ; j++)
-		{
-			for (k = 2 ; k < 10 ; k++)
-			{
-				if (i < j && j < k)
-				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(k + '0');
-					if (i + j + k != 24)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
-		}
+	for (q = p + 1; q <= 99; q++)
+	{
+	putchar((p / 10) + '0');
+	putchar((p % 10) + '0');
+	putchar(' ');
+	putchar((q / 10) + '0');
+	putchar((q % 10) + '0');
+	if (p == 98 && q == 99)
+	continue;
+	putchar(',');
+	putchar(' ');
+	}
 	}
 	putchar('\n');
 	return (0);
