@@ -44,11 +44,12 @@ int count_word(char *s)
 
 																			flag = 1;
 
-																						w++;
+
+																							w++;
 
 																								}
 
-											}
+													}
 
 
 
@@ -118,7 +119,7 @@ char **strtow(char *str)
 
 				if (tmp == NULL)
 
-					return (NULL);
+				return (NULL);
 
 				while (start < end)
 
